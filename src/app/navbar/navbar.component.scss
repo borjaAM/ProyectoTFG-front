@@ -1,0 +1,87 @@
+$moonshot-redesign-dark-grey-1: #707070;
+$moonshot-redesign-grey-1: #DCDCDC;
+$moonshot-redesign-orange-1: #EC722E;
+
+.main-container {
+  background-color: #F8F9FA;
+  width: 100%;
+  height: 66px;
+  padding: 5px 10px;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+
+  .navbar-wrapper {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+
+    .image-wrapper {
+      background: $moonshot-redesign-grey-1;
+      border-radius: 100%;
+      .moonshot-logo {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .modules-wrapper {
+      height: 100%;
+      width: 444px;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+
+      .module-wrapper {
+        width: 66px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        margin-right: 60px;
+        margin-top: 5px;
+
+        .module-icon-wrapper {
+          height: fit-content;
+          margin-top: 5px;
+          margin-left: 11px;
+          img {
+            width: 43.65px;
+            height: 30px;
+          }
+        }
+
+        .module-label-wrapper {
+          text-align: center;
+          margin-left: 3px;
+          .module-label {
+            color: $moonshot-redesign-dark-grey-1;
+            width: 60px;
+            height: 13px;
+            font: 12px Lato;
+            text-decoration: none;
+          }
+        }
+
+        &.active {
+          .module-icon-wrapper {
+            .module-icon:before {
+              color: $moonshot-redesign-orange-1;
+            }
+          }
+
+          .module-label-wrapper {
+            .module-label {
+              color: $moonshot-redesign-orange-1;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

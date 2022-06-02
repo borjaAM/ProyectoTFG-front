@@ -1,0 +1,20 @@
+<app-navigation-tab [navigationLinks]="links" [activeLink]="activeLink"></app-navigation-tab>
+<div class="dashboard-wrapper">
+  <iframe *ngIf="displayMembersDashboard"
+    title="actors-dashboard"
+    src="http://localhost:3000/public/dashboard/d48bd4f6-85ff-4ea3-96c1-f68a93fa474f"
+  ></iframe>
+  <iframe *ngIf="displayActorsDashboard"
+    title="actors-dashboard"
+          src="http://localhost:3000/public/dashboard/0cd6f2d2-c30a-4342-98f6-d12c812356d6"
+  ></iframe>
+  <iframe *ngIf="displayEventsDashboard"
+    title="events-dashboard"
+    src="http://localhost:3000/public/dashboard/678b03df-6722-4fd8-a179-23367e0ec562"
+  ></iframe>
+  <iframe *ngIf="displayPostsDashboard"
+    title="wall-posts-dashboard"
+    src="http://localhost:3000/public/dashboard/730870dd-7f8b-46b7-b30c-08f21d4bc1dd"
+  ></iframe>
+
+</div>

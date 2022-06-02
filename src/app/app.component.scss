@@ -1,0 +1,16 @@
+:host {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.main-container {
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  height: calc(100vh - 226px);
+  justify-content: flex-start;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+}

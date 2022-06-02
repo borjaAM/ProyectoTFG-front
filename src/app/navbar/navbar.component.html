@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="navbar-wrapper">
+    <div class="image-wrapper">
+      <img [src]="logo" class="moonshot-logo" alt="ecosystem-logo">
+    </div>
+    <div class="modules-wrapper">
+      <a class="module-wrapper" *ngFor="let module of modules"
+         [ngClass]="{'active': activeLink === module.name}"
+         [title]="module.name"
+         [routerLink]="module.url"
+         (click)="activeLink = module.name"
+      >
+        <div class="module-icon-wrapper">
+          <img [src]="module.iconName" [ngClass]="[module.iconName, 'module-icon']" alt="navbar-module">
+        </div>
+        <div class="module-label-wrapper">
+          <p class="module-label">{{ module.name }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

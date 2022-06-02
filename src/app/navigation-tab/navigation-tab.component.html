@@ -1,0 +1,16 @@
+<div class="navbar-wrapper">
+  <div class="modules-wrapper">
+    <a class="module-wrapper" *ngFor="let link of modules"
+       [ngClass]="{'active': activeLink === link.iconName}"
+       [title]="link.name"
+       [routerLink]="link.url"
+       (click)="(activeLink = link.iconName)">
+      <div class="module-icon-wrapper">
+        <img [src]="link.iconName" class="module-icon" alt="category-icon">
+      </div>
+      <div class="module-label-wrapper">
+        <p class="module-label">{{ link.name }}</p>
+      </div>
+    </a>
+  </div>
+</div>

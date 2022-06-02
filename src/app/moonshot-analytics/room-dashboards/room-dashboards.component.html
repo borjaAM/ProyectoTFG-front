@@ -1,0 +1,18 @@
+<app-navigation-tab [navigationLinks]="links" [activeLink]="activeLink"></app-navigation-tab>
+<div class="dashboard-wrapper">
+  <iframe
+    *ngIf="displayDirectChatsDashboard"
+    src="http://localhost:3000/public/dashboard/dc62de43-05ce-4ea2-886d-f25d04c468cf"
+    title="directChatDashboard"
+  ></iframe>
+  <iframe
+    *ngIf="displayFollowUpRoomsDashboard"
+    src="http://localhost:3000/public/dashboard/a7de0f60-1189-47f7-a8c5-54a79665872d"
+    title="followUpRoomDashboard"
+  ></iframe>
+  <iframe
+    *ngIf="displayPublicChannelsDashboard"
+    src="http://localhost:3000/public/dashboard/d82f13aa-0f35-458c-ac2e-b8d60c20cab6"
+    title="publicChannelDashboard"
+  ></iframe>
+</div>
